@@ -129,7 +129,7 @@ $ns duplex-link-op $n6 $n8 orient right-down
 $ns duplex-link-op $n9 $n10 orient right
 
 
-#Setup a TCP connection beetween node 2 -- 7
+#Setup a TCP connection between node 2 -- 7
 set tcp [new Agent/TCP]
 $tcp set class_ 2
 $ns attach-agent $n2 $tcp
@@ -146,7 +146,7 @@ $ftp set type_ FTP
 
 
 
-#Setup a UDP connection beetween node 1 -- 10
+#Setup a UDP connection between node 1 -- 10
 set udp1 [new Agent/UDP]
 $ns attach-agent $n1 $udp1
 set null [new Agent/Null]
@@ -164,7 +164,7 @@ $cbr1 set rate_ 1mb
 $cbr1 set random_ false
 
 
-#Setup a UDP connection beetween node 8 -- 0
+#Setup a UDP connection between node 8 -- 0
 set udp2 [new Agent/UDP]
 $ns attach-agent $n8 $udp2
 set null [new Agent/Null]
