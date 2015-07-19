@@ -190,6 +190,14 @@ $ns at 3.0 "$cbr2 stop"
 $ns at 4.0 "$ftp stop"
 $ns at 4.5 "$cbr1 stop"
 
+proc plotWindow {tcpSource file}     {
+global ns
+set time 0.1
+set now [$ns now]
+set cwnd [ $tcpSource set cwnd_]
+puts $file "$now $cwnd"
+$ns at [expr $now+$time] "plotWindow $tcpSource $file"
+}
 
 #Call the finish procedure after 5 seconds of simulation time
 $ns at 5.0 "finish"
